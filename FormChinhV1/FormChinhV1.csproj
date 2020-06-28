@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9571F9A5-3C73-4788-A380-9D0D6F475304}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormChinhV1</RootNamespace>
+    <AssemblyName>FormChinhV1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BLL_Account.cs" />
+    <Compile Include="BLL\BLL_DGViPham.cs" />
+    <Compile Include="BLL\BLL_DocGia.cs" />
+    <Compile Include="BLL\BLL_NguoiDung.cs" />
+    <Compile Include="BLL\BLL_PhieuMuon.cs" />
+    <Compile Include="BLL\BLL_PhieuMuonTra.cs" />
+    <Compile Include="BLL\BLL_PhieuTra.cs" />
+    <Compile Include="BLL\BLL_QLNV.cs" />
+    <Compile Include="BLL\BLL_TaiLieu.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
+    <Compile Include="DTO\ViPham.cs" />
+    <Compile Include="Nguoi_Dung.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Phan_Loai.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Phieu_Muon.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Phieu_Muon_Tra.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Phieu_Tra.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SE_06.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SE_06.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SE_06.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SE_06.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SE_06.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Tài_Liệu.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBC.Designer.cs">
+      <DependentUpon>UserControlBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome.Designer.cs">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlMuon.Designer.cs">
+      <DependentUpon>UserControlMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlInfo.Designer.cs">
+      <DependentUpon>UserControlInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPass.Designer.cs">
+      <DependentUpon>UserControlPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlQLNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlQLNV.Designer.cs">
+      <DependentUpon>UserControlQLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlQLTL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlQLTL.Designer.cs">
+      <DependentUpon>UserControlQLTL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlQLĐG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlQLĐG.Designer.cs">
+      <DependentUpon>UserControlQLĐG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlTra.Designer.cs">
+      <DependentUpon>UserControlTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlTTCN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlTTCN.Designer.cs">
+      <DependentUpon>UserControlTTCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlXLĐG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlXLĐG.Designer.cs">
+      <DependentUpon>UserControlXLĐG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ĐăngNhập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ĐăngNhập.Designer.cs">
+      <DependentUpon>ĐăngNhập.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViTri.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Độc_giả.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Độc_Giả_Vi_Phạm.cs">
+      <DependentUpon>SE_06.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBC.resx">
+      <DependentUpon>UserControlBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome.resx">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlMuon.resx">
+      <DependentUpon>UserControlMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlInfo.resx">
+      <DependentUpon>UserControlInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPass.resx">
+      <DependentUpon>UserControlPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlQLNV.resx">
+      <DependentUpon>UserControlQLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlQLTL.resx">
+      <DependentUpon>UserControlQLTL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlQLĐG.resx">
+      <DependentUpon>UserControlQLĐG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlTra.resx">
+      <DependentUpon>UserControlTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlTTCN.resx">
+      <DependentUpon>UserControlTTCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlXLĐG.resx">
+      <DependentUpon>UserControlXLĐG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ĐăngNhập.resx">
+      <DependentUpon>ĐăngNhập.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="SE_06.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SE_06.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SE_06.edmx.diagram">
+      <DependentUpon>SE_06.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tailieu48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tailieu32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docgia48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanvien48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baocao48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Themtailieu48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Themtailieu32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xoatailieu32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docgia32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baocao32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\150px-Logo_dhbkdn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuy32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chitiet32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thuvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adduser32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanvien32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookdung64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-button-vector-274787 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-button-vector-274787 %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaperflare.com_wallpaper %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a-1508382581 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaperflare.com_wallpaper %281%292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-icon-vector %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-icon-vector-illustration %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SE_06.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SE_06.edmx</DependentUpon>
+      <LastGenOutput>SE_06.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SE_06.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SE_06.edmx</DependentUpon>
+      <LastGenOutput>SE_06.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

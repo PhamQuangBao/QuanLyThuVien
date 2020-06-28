@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3a0c4a48af8c427eb785651ea9dd5691" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="SE_06Model.Account" Width="1.5" PointX="8" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Độc_giả" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Độc_Giả_Vi_Phạm" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Nguoi_Dung" Width="1.5" PointX="5.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Phan_Loai" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Phieu_Muon" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Phieu_Muon_Tra" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Phieu_Tra" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.Tài_Liệu" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_06Model.ViTri" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="SE_06Model.fk_pm_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_06Model.fk_pm_ID_ĐG" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_06Model.FK__Tài_Liệu__ID_ViT__04AFB25B" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_06Model.fk_pm_ID_PhieuMuon" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_06Model.fk_pm_ID_TaiLieu" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_06Model.FK__Tài_Liệu__ID_ViT__05A3D694" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
